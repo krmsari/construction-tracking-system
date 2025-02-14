@@ -1,7 +1,7 @@
 package com.kerem.authservice.controller;
 
-import com.kerem.authservice.entity.Role;
 import com.kerem.authservice.service.abstracts.RoleService;
+import com.kerem.authservice.entity.Role;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;

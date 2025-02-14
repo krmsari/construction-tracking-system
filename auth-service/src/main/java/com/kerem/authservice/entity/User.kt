@@ -16,6 +16,6 @@ data class User(
 
     @ManyToOne
     @JoinColumn(name = "role_id", nullable = false)
-    var role:Role=Role()
+    var role: Role = Role()
 
 ) : BaseEntity()

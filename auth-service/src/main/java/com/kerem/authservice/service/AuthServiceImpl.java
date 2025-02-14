@@ -1,15 +1,17 @@
 package com.kerem.authservice.service;
 
+
 import com.kerem.authservice.dao.UserRepository;
-import com.kerem.authservice.dto.user.request.UserLoginDTO;
+
 import com.kerem.authservice.dto.user.request.UserRegisterDTO;
 import com.kerem.authservice.dto.user.response.AuthResponseDTO;
-import com.kerem.authservice.entity.Role;
-import com.kerem.authservice.entity.User;
 import com.kerem.authservice.exception.abstracts.CommonErrorCodes;
 import com.kerem.authservice.exception.specific.GenericException;
 import com.kerem.authservice.service.abstracts.AuthService;
 import com.kerem.authservice.util.JwtUtil;
+import com.kerem.authservice.dto.user.request.UserLoginDTO;
+import com.kerem.authservice.entity.Role;
+import com.kerem.authservice.entity.User;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;

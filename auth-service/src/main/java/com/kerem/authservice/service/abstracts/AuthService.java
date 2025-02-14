@@ -1,8 +1,8 @@
 package com.kerem.authservice.service.abstracts;
 
-import com.kerem.authservice.dto.user.request.UserLoginDTO;
 import com.kerem.authservice.dto.user.request.UserRegisterDTO;
 import com.kerem.authservice.dto.user.response.AuthResponseDTO;
+import com.kerem.authservice.dto.user.request.UserLoginDTO;
 import com.kerem.authservice.entity.User;
 
 import java.util.List;

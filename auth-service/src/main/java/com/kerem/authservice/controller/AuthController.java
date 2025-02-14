@@ -1,13 +1,13 @@
 package com.kerem.authservice.controller;
 
-import com.kerem.authservice.dto.user.request.UserLoginDTO;
+
 import com.kerem.authservice.dto.user.request.UserRegisterDTO;
 import com.kerem.authservice.dto.user.response.AuthResponseDTO;
-import com.kerem.authservice.entity.User;
 import com.kerem.authservice.service.abstracts.AuthService;
+import com.kerem.authservice.dto.user.request.UserLoginDTO;
+import com.kerem.authservice.entity.User;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

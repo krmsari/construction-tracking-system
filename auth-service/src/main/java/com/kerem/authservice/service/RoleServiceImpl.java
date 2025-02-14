@@ -1,10 +1,11 @@
 package com.kerem.authservice.service;
 
 import com.kerem.authservice.dao.RoleRepository;
-import com.kerem.authservice.entity.Role;
+
 import com.kerem.authservice.exception.abstracts.CommonErrorCodes;
 import com.kerem.authservice.exception.specific.GenericException;
 import com.kerem.authservice.service.abstracts.RoleService;
+import com.kerem.authservice.entity.Role;
 import org.springframework.stereotype.Service;
 
 import java.util.UUID;

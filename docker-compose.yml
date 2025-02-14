@@ -28,6 +28,8 @@ services:
       SPRING_DATASOURCE_URL: jdbc:postgresql://postgres-db:5432/auth_db
       SPRING_DATASOURCE_USERNAME: admin
       SPRING_DATASOURCE_PASSWORD: secret
+      SECRET_KEY: ${SECRET_KEY}
+      SECRET_EXPIRATION_TIME: ${SECRET_EXPIRATION_TIME}
     networks:
       - app-network
 

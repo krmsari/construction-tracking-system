@@ -1,5 +1,7 @@
 package com.kerem.authservice.service.abstracts;
 
+
+
 import com.kerem.authservice.entity.Role;
 
 import java.util.UUID;

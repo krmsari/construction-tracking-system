@@ -9,7 +9,10 @@
 		<version>0.0.1</version>
 	</parent>
 
+	<!-- Bu modülün kendi artifact bilgileri -->
 	<artifactId>auth-service</artifactId>
+	<packaging>jar</packaging>
+	<name>auth-service</name>
 
 	<dependencies>
 		<dependency>
@@ -57,22 +60,26 @@
 			<groupId>org.jetbrains.kotlin</groupId>
 			<artifactId>kotlin-reflect</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.module</groupId>
+			<artifactId>jackson-module-kotlin</artifactId>
+		</dependency>
 	</dependencies>
 
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-				<version>${spring-boot.version}</version>
-				<executions>
-					<execution>
-						<goals>
-							<goal>repackage</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-		</plugins>
-	</build>
+<build>
+	<plugins>
+		<plugin>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-maven-plugin</artifactId>
+			<version>${spring-boot.maven}</version>  <!-- En güncel versiyon olup olmadığını kontrol et -->
+			<executions>
+				<execution>
+					<goals>
+						<goal>repackage</goal>
+					</goals>
+				</execution>
+			</executions>
+		</plugin>
+	</plugins>
+</build>
 </project>

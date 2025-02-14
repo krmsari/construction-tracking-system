@@ -1,8 +1,8 @@
 package com.kerem.authservice.service;
 
 import com.kerem.authservice.dao.UserRepository;
-import com.kerem.authservice.entity.User;
 import com.kerem.authservice.entity.UserPrincipal;
+import com.kerem.authservice.entity.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
