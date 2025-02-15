@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="auth-service" />
+        <module name="construction-management-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -16,7 +17,9 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="auth-serivce" options="-parameters" />
-      <module name="auth-service" options="" />
+      <module name="auth-service" options="-parameters" />
+      <module name="construction-management-service" options="-parameters" />
+      <module name="construction-tracking-system" options="-parameters" />
     </option>
   </component>
 </project>

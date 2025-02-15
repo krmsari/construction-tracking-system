@@ -16,6 +16,21 @@ services:
     networks:
       - app-network
 
+  postgres-db-construction:
+    image: postgres:15
+    container_name: postgres_container
+    restart: always
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: secret
+      POSTGRES_DB: construction_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - app-network
+
   auth-service:
     build: ./auth-service
     container_name: auth_service_container
@@ -35,6 +50,22 @@ services:
     networks:
       - app-network
 
+  construction-management-service:
+    build: ./construction-management-service
+    container_name: construction_management_service_container
+    restart: always
+    env_file:
+      - construction-management-service/.env
+    ports:
+      - "8100:8100"
+    depends_on:
+      - postgres-db
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres-db:5432/construction_db
+      SPRING_DATASOURCE_USERNAME: admin
+      SPRING_DATASOURCE_PASSWORD: secret
+    networks:
+      - app-network
 volumes:
   postgres_data:
 

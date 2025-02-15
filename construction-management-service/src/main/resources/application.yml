@@ -1,18 +1,17 @@
 server:
-  port: 8080
+  port: 8100
 
 spring:
   application:
-    name: auth-service
+    name: construction-management-service
 
   datasource:
     url: jdbc:postgresql://localhost:5432/postgres
     username: postgres
     password: 123
-#    url: jdbc:postgresql://postgres-db:5432/auth_db
-#    username: admin
-#    password: secret
-
+    #    url: jdbc:postgresql://postgres-db:5432/auth_db
+    #    username: admin
+    #    password: secret
     driver-class-name: org.postgresql.Driver
 
   jpa:
@@ -20,6 +19,3 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
-
-SECRET_KEY: DtX9Ho4m4hm5s7wtFJBbNoHPsgUhjeD76oFmOlp3Wko=
-SECRET_EXPIRATION_TIME: 86400000
