@@ -15,13 +15,18 @@
 
     <properties>
         <java.version>17</java.version>
+
         <kotlin.version>2.0.0</kotlin.version>
-        <spring-boot.version>3.4.2</spring-boot.version>
-        <postgresql.version>42.7.5</postgresql.version>
-        <jjwt.version>0.12.3</jjwt.version>
         <kotlin.module.version>2.17.2</kotlin.module.version>
+
+        <spring-boot.version>3.4.2</spring-boot.version>
+        <spring-cloud.version>4.2.0</spring-cloud.version>
         <apache.maven>3.13.0</apache.maven>
         <spring-boot.maven>3.4.2</spring-boot.maven>
+
+        <postgresql.version>42.7.5</postgresql.version>
+
+        <jjwt.version>0.12.3</jjwt.version>
     </properties>
 
     <dependencyManagement>
@@ -152,6 +157,9 @@
                 <configuration>
                     <source>${java.version}</source>
                     <target>${java.version}</target>
+                    <compilerArgs>
+                        <arg>-parameters</arg>
+                    </compilerArgs>
                 </configuration>
                 <executions>
                     <execution>
@@ -189,19 +197,6 @@
                         </goals>
                     </execution>
                 </executions>
-            </plugin>
-
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>${apache.maven}</version>  <!-- Bu örnekte 3.8.1 kullanılmaktadır, projenize uygun olan sürümü kullanabilirsiniz -->
-                <configuration>
-                    <source>1.8</source> <!-- Java sürümünüzü buraya yazın, örneğin 1.8 veya daha yüksek bir sürüm -->
-                    <target>1.8</target> <!-- Java sürümünüzü buraya yazın -->
-                    <compilerArgs>
-                        <arg>-parameters</arg>
-                    </compilerArgs>
-                </configuration>
             </plugin>
         </plugins>
     </build>
