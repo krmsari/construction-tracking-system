@@ -15,4 +15,5 @@ public interface AuthService {
 
     List<User> getAllUsers();
     User getUserById(UUID id);
+    User getUserByEmail(String email);
 }

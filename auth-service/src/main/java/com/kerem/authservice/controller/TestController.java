@@ -12,4 +12,9 @@ public class TestController {
     public String test() {
         return "Test";
     }
+
+    @GetMapping("/error")
+    public String error() {
+        return "Error";
+    }
 }

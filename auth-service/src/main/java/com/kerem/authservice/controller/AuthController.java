@@ -15,6 +15,7 @@ import java.util.UUID;
 
 @RestController
 @RequestMapping("/auth")
+@CrossOrigin(origins = "http://localhost:3000")
 public class AuthController {
 
     private final AuthService authService;
@@ -48,6 +49,10 @@ public class AuthController {
     @GetMapping("/user/{id}")
     public User getUserById(@PathVariable UUID id) {
         return authService.getUserById(id);
+    }
+    @GetMapping("/user/email/{email}")
+    public User getUserByEmail(@PathVariable String email) {
+        return authService.getUserByEmail(email);
     }
 
 }

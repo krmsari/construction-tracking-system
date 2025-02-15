@@ -24,11 +24,11 @@ public class RoleServiceImpl implements RoleService {
     }
 
     @Override
-    public Role addRole(Role role) {
+    public void addRole(Role role) {
         if (roleRepository.existsByName(role.getName())) {
             throw new GenericException(CommonErrorCodes.ROLE_ALREADY_EXISTS);
         }
-        return roleRepository.save(role);
+        roleRepository.save(role);
     }
 
     @Override
