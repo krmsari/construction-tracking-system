@@ -43,8 +43,10 @@ public class SecurityConfig {
         http
                 .cors(Customizer.withDefaults())
                 .csrf(csrf -> csrf.disable())
+                // Basic Authentication'ı devre dışı bırakıyoruz
+                .httpBasic(httpBasic -> httpBasic.disable())
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/auth/register","/auth/login","/auth/users","/auth/user/**","/auth/**","/test/run","/role/**").permitAll()
+                        .requestMatchers("/auth/login", "/auth/register", "/role/**").permitAll()
                         .anyRequest().authenticated()
                 )
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
@@ -59,7 +61,7 @@ public class SecurityConfig {
         configuration.setAllowedOrigins(List.of("http://localhost:3000")); // Sadece frontend'inizin adresine izin verin
         configuration.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
         configuration.setAllowedHeaders(List.of("*"));
-        configuration.setAllowCredentials(true); // Eğer credentials (cookie vb.) kullanılacaksa
+        configuration.setAllowCredentials(true);
 
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         source.registerCorsConfiguration("/**", configuration);
