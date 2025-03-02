@@ -10,7 +10,16 @@
 * [Spring Security](https://docs.spring.io/spring-boot/3.4.2/reference/web/spring-security.html)
 * [Spring Web](https://docs.spring.io/spring-boot/3.4.2/reference/web/servlet.html)
 
-Web tabanlı bir yapı inşaat takip sistemi. İnşaat projelerini, sorumlu kişileri ve ilerlemeyi takip etmek için geliştirilmiştir.
+_____________
+
+<H3>PROJE DETAYI</H3>
+
+**Mikroservis mimarisine** sahip, **Java** ve **Kotlin**’in hibrid şekilde kullanıldığı bu proje, inşaat projelerinin takibini sağlamak amacıyla geliştirilmiş web tabanlı bir sistemdir. Kullanıcılar, projelerin ilerleyişini, sorumlu kişileri ve kritik aşamaları takip edebilir.
+
+Projede, veri yönetimini optimize etmek ve bağımlılığı azaltmak için **Kotlin** data class kullanılmıştır. Bu sayede, sistemde daha esnek ve ölçeklenebilir bir varlık yönetimi sağlanmıştır. Güvenli kimlik doğrulama OAuth2 protokolü ile gerçekleştirilmiş olup, kullanıcı yetkilendirme süreçleri güvenilir hale getirilmiştir.
+
+**Jav**a ve **Spring Boot** ile geliştirilen **RESTful API** sayesinde sistem, hem web hem de mobil platformlarda sorunsuz çalışabilmektedir. Mikroservis mimarisi sayesinde ölçeklenebilirlik artırılmış, bağımsız servisler ile sistem modüler hale getirilmiştir.
+______________
 
 ## Özellikler ✨
 ### 1. İnşaat Projesi Oluşturma
